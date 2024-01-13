@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECMTesting
+namespace Testing
 {
     public class Testing
     {
@@ -13,17 +13,12 @@ namespace ECMTesting
         static ECM ecm = new ECM();
         public static void Main(string[] Args)
         {
-            ecm.ECMActions.Add(1, Option1);
-            ecm.ECMActions.Add(2, Option2);
-            ecm.ECMActions.Add(3, Option3);
-            ecm.ECMItems.Add("First Option");
-            ecm.ECMItems.Add("Second Option");
-            ecm.ECMItems.Add("Third Option");
-            Console.WriteLine("Press Enter to continue...");
-            Console.ReadLine();
-            ecm.ECMDisplay();
-            Console.ReadLine();
-            
+            ecm.Items.Add(new ECMItem(1, "First Option", Option1));
+            ecm.Items.Add(new ECMItem(2, "Second Option", Option2));
+            ecm.Items.Add(new ECMItem(3, "Third Option", Option3));
+
+            ecm.Display();
+            Console.ReadLine();            
         }
 
         public static void Option1()
