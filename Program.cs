@@ -21,23 +21,16 @@ namespace ECMPackage
                 Console.WriteLine($"{i + 1}. {ECMItems[i]}");
             }
             Console.WriteLine("Your choice:");
-            if (int.TryParse(Console.ReadLine(), out int choice))
-            {
-                if (ECMActions.ContainsKey(choice))
-                {
-                    ECMActions[choice].Invoke();
-                }
-                else
-                {
-                    Console.WriteLine("Invalid choice. Please try again.");
-                }
-            }
-            else
+            if (!int.TryParse(Console.ReadLine(), out int choice))
             {
                 Console.WriteLine("Invalid input. Please enter a number.");
             }
-        }
-    }
 
-    
+            if (!ECMActions.ContainsKey(choice))
+            {
+                Console.WriteLine("Invalid choice. Please try again.");
+            }
+            ECMActions[choice].Invoke();
+        }
+    }  
 }
