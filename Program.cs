@@ -14,13 +14,13 @@ namespace ECMPackage
 
         };
 
-        public void ECMain()
+        public void ECMDisplay()
         {
             for (int i = 0; i < ECMItems.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {ECMItems[i]}");
             }
-            Console.Write("\n");
+            Console.WriteLine("Your choice:");
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
                 if (ECMActions.ContainsKey(choice))

@@ -21,7 +21,7 @@ namespace ECMTesting
             ecm.ECMItems.Add("Third Option");
             Console.WriteLine("Press Enter to continue...");
             Console.ReadLine();
-            ecm.ECMain();
+            ecm.ECMDisplay();
             Console.ReadLine();
             
         }
