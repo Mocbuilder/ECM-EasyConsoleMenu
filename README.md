@@ -1,7 +1,7 @@
 # ECM - EasyConsoleMenu
 This is the sourcecode for the ECM - Easy Menu System NuGet Package, which helps with creating an easy Menu in your console application.
 
-# Usage
+## Usage
 To use ECM install the NuGet-Package and make sure their is a ```using ECMPackage;``` added in your using-directives.
 To start make a new instance of ECM in your class, like this: ```static ECM ecm = new ECM();```
 ECM is based on a combination of a Ditionary called ECMActions and a List called ECMItems.
