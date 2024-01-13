@@ -4,38 +4,37 @@ namespace ECMPackage
 {
     public class ECM
     {
-        public Dictionary<int, Action> ECMOptionMethods = new Dictionary<int, Action>
+        public Dictionary<int, Action> ECMActions = new Dictionary<int, Action>
         {
 
         };
 
-        public List<string> ECMOptionNames = new List<string>
+        public List<string> ECMItems = new List<string>
         {
 
         };
 
         public void ECMain()
         {
-            for (int i = 0; i < ECMOptionNames.Count; i++)
+            for (int i = 0; i < ECMItems.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {ECMOptionNames[i]}");
+                Console.WriteLine($"{i + 1}. {ECMItems[i]}");
             }
-            string UserInput = Console.ReadLine();
-            int UserChoice = Convert.ToInt32(UserInput);
-            switch (UserChoice)
+            Console.Write("\n");
+            if (int.TryParse(Console.ReadLine(), out int choice))
             {
-                case 1:
-                    Console.WriteLine("Option1();");
-                    break;
-                case 2:
-                    Console.WriteLine("Option2();");
-                    break;
-                case 3:
-                    Console.WriteLine("Option3();");
-                    break;
-                default:
-                    Console.WriteLine("Error");
-                    break;
+                if (ECMActions.ContainsKey(choice))
+                {
+                    ECMActions[choice].Invoke();
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. Please try again.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a number.");
             }
         }
     }
