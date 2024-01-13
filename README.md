@@ -1,10 +1,12 @@
 # ECM - EasyConsoleMenu
 This is the sourcecode for the ECM - Easy Menu System NuGet Package, which helps with creating an easy Menu in your console application.
+Also included is an ```Example.cs``` that showcases how to use the package in a project.
 
 ## Usage
 To use ECM install the NuGet-Package and make sure their is a ```using ECMPackage;``` added in your using-directives.
 To start make a new instance of ECM in your class, like this: ```static ECM ecm = new ECM();```
-ECM is based on a combination of a Ditionary called ECMActions and a List called ECMItems.
+The menu is running in a while-loop, so it will always show once a function is finished and the program is still running.
+Color and other formatting are applied from the overarching console (your code).
 
 ### Adding Options
 To add options to the menu, define the input needed from the user and the function to be called by it use ```ecm.Items.Add(new ECMItem(1, "First Option", Option1));```

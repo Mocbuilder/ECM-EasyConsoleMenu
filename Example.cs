@@ -1,26 +1,27 @@
 ﻿using ECMPackage;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Testing
+namespace UsageExample
 {
-    public class Testing
+    public class Example
     {
-
+        //Define a new instance of the ECM
         static ECM ecm = new ECM();
         public static void Main(string[] Args)
         {
+            //Add your options to the ECM Items List
             ecm.Items.Add(new ECMItem(1, "First Option", Option1));
             ecm.Items.Add(new ECMItem(2, "Second Option", Option2));
             ecm.Items.Add(new ECMItem(3, "Third Option", Option3));
 
-            ecm.Display();
-            Console.ReadLine();            
+            //Format the console output, e.g. the font-color:
+            Console.ForegroundColor = ConsoleColor.Green;
+            //Display the menu
+            ecm.Display();           
         }
 
+        //Your functions, these only write a short text
         public static void Option1()
         {
             Console.WriteLine("This is Option 1 doing something.");
