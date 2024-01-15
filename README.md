@@ -1,6 +1,6 @@
 # ECM - EasyConsoleMenu
 This is the sourcecode for the ECM - Easy Menu System NuGet Package, which helps with creating an easy Menu in your console application.
-Also included is an ```Example.cs``` that showcases how to use the package in a project.
+Also included is an ```Example.cs``` that showcases how to use the package in a project. You can find it at NuGet.org here: https://www.nuget.org/packages/ECMPackage     
 
 ## Usage
 To use ECM install the NuGet-Package and make sure their is a ```using ECMPackage;``` added in your using-directives.
